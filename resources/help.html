@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <title>Guida rapida di Web Site Analyser</title>
+</head>
+<body>
+<div class="document" id="contents">
+    <h1 class="title">Guida rapida di Web Site Analyser</h1>
+    <hr>
+    <div class="section" id="features">
+        <h1>Funzionalità principali</h1>
+        <p>L' applicazione permette di analizzare siti web ed aiutare ad eseguirne la manutezione.</p>
+        <p>Permette in particolare di eseguire le seguenti operazioni:</p>
+        <ul>
+            <li>Analisi di siti web tramite immissione manuale dell'URI dominio</li>
+            <li>Analisi di siti da file tramite selezione grafica del dominio o immissione manuale dell'URI dominio</li>
+            <li>Aggiunta e visualizzazione degli URI Seed in qualsiasi momento una volta aperta l'esplorazione</li>
+            <li>Archiviazione automatica (se prevista dall'utente)</li>
+            <li>Apertura di un archivio precedentemente salvato</li>
+            <li>Mettere in pausa, riprendere o fermare l'esecuzione di un analisi</li>
+            <li>Mostrare lo stato di scaricamento degli URI e visualizzarne informazioni correlate</li>
+            <li>Visualizzare informazioni statistiche su un dominio</li>
+            <li>Calcolare il numero di link da un dominio verso un altro (o verso se stesso)</li>
+        </ul>
+        <div class="section" id="newopenanalysis">
+            <h1>Creazione e apertura di un analisi</h1>
+            <h2>Creazione di un analisi</h2>
+            <p>Per creare una sessione di analisi basta premere sul pulsante <i><b>Nuova analisi</b></i>.
+                Nella finestra di dialogo sarà possibile specificare manualmente l' URI dominio o nel caso di dominio locale selezionarlo tramite interfaccia grafica.
+            </p>
+            <p>Un URI dominio valido per poter essere analizzato deve possedere la seguente sintassi</p>
+            <blockquote><i>scheme://authority[path]</i></blockquote>
+            <p>La parte <i>path</i> è opzionale, la parte <i>authority</i> consiste solamente dell'<i>host</i>. L'URI dominio che specifica
+                un dominio puo anche non essere una pagina scaricabile</p>
+            <p class="quote"><h4>Esempio</h4></p>
+            <blockquote>
+                <p><i>http://docs.oracle.com/javase/specs/jls/se8</i></p>
+                <p><i>file:///C:/Cartella/</i></p>
+            </blockquote>
+            <p>Se lo si desidera si può attivare la funzione di archiviazione automatica. Spuntare la casella <i><b>Archivia l'analisi</b></i>. Tale funzione permettere di archiviare
+                l'analisi automaticamente ogni 50 secondi o ad avvenuta sospensione dell'analisi.
+            </p>
+            <p>Una volta specificato l'URI dominio siamo pronti per creare la sessione di analisi. Premere <b><i>Ok</i></b>. Nel caso è stata attivata l'archiviazione verrà mostrata un ultima finestra per selezionare la directory
+                di destinazione dell'archivio. Adesso siamo pronti per davvero. La sessione di analisi è stata aperta.
+            </p>
+            <h2>Creazione di un analisi tramite interfaccia</h2>
+            <p>Nel caso in cui il dominio desiderato proviene da una fonte locale è possibile generare il suo URI tramite interfaccia. Premere <i><b>Sfoglia...</b></i></p>
+            <p>Selezionare l'opzione più opportuna a seconda che il dominio desiderato sia un file o una cartella locale</p>
+            <p>Una volta selezionato, l'URI del dominio apparirà automaticamente nella casella di testo presente nella finestra di dialogo <i>Nuova analisi</i>.</p>
+            <p>Anche in questo caso è possibile attivare la funzione di archivazione automatica se lo si desidera.</p>
+            <p>Impostati i parametri possiamo anche in questo caso premere <b><i>Ok</i></b> per creare la sessione d'analisi</p>
+            <h2>Apertura di un analisi precedentemente salvata</h2>
+            <p>Nel caso si possiede un archivio di una precedente analisi, è possibile ripristinare la sessione di analisi salvata.</p>
+            <p>Per fare ciò basta premere il pulsante <b><i>Apri analisi</i></b>. Selezionate la cartella contenente l'archivio e confermare. L'analisi salvata verrà quindi ripristinata e automaticamente riprenderà dal punto interrotto se non terminata.</p>
+        </div>
+        <div class="section" id="seed">
+            <h1>Specifica di URI Seed</h1>
+            <p>Per poter effettuare un'esplorazione del sito web è necessario specificare uno o più indirizzi URI di pagine web che appartengono al dominio, questi sono detti seed.</p>
+            <p class="quote"><h4>Esempio</h4></p>
+            <blockquote>
+                <p>Se il dominio è:</p><p> <i>http://twiki.di.uniroma1.it/pub/Metod_prog</i></p>
+                <p>un URI Seed potrebbe essere:</p><p><i>http://twiki.di.uniroma1.it/pub/Metod_prog/RS_L18/lezione18.html</i></p>
+            </blockquote>
+            <p>Chiaramente gli URI Seed devono corrispondere a pagine web e devono appartenere al dominio del sito web.</p>
+            <p>Aperta la sessione di analisi è possibile inserire gli URI Seed  e visualizzare quelli già inseriti in ogni momento. Premere il bottone <b><i>Seed</i></b>.</p>
+            <p>Similmente all'inserimento del dominio è possibile specificare l'URI Seed manualmente e nel caso di dominio locale tramite un interfaccia.
+                Una volta comparso l'URI Seed nella casella di testo corrispondente aggiungerlo con l'apposito bottone <b><i>Aggiungi</i>.</b> Il seed apparirà quindi nella lista degli URI
+                Seed inseriti.
+            </p>
+        </div>
+        <div class="section" id="exec">
+            <h1>Esecuzione di un analisi</h1>
+            L'esecuzione di un analisi prevede che una sessione di analisi sia stata creata o aperta da un precedente archivio. Inoltre prevede l'inserimento di URI Seed da cui
+            far partire l'esplorazione. Fatti questi passi è possibile avviare l'esplorazione con l'apposito tasto <b><i>Avvia</i></b> (nel caso di apertura di un archivio con URI ancora da scaricare l'avvio sarà automatico). Il tasto si trasformerà quindi nel tasto per mettere in pausa
+            l'esplorazione <b><i>Sospendi</i></b>. Se l'esplorazione è sospesa premere nuovamente <b><i>Avvia</i></b> per riprenderla. Nel caso in cui si vuole invece fermare definitivamente l'esecuzione basterà premere il tasto <b><i>Ferma</i></b>. Sarà ancora possibile vedere
+            le informazioni relative all'analisi ma non sarà possibile riprenderla o aggiungere nuovi URI Seed da cui far ripartire l'analisi. Basterà infine chiudere la scheda relativa ad un
+            dominio per chiudere la sessione relativa al dominio. Nel caso in cui la sessione chiusa è stata archiviata sarà possibile riprendere l'analisi aprendo l'archivio.
+            </b>
+        </div>
+        <div class="section" id="infouri">
+            <h1>Informazioni sugli URI analizzati</h1>
+            <p>Una volta avviata l'analisi, la tabella relativa agli URI analizzati verrà popolata. Sarà possibile vedere l'URI analizzato e il suo stato di download. Premendo sulla
+                riga relativa all'URI analizzato, nel caso di scaricamento avvenuto con successo, sarà possibile visualizzare informazioni sull'URI. Tali informazioni includono:</p>
+            <ul>
+                <li>Visualizzazione della pagina</li>
+                <li>Appartenenza al dominio</li>
+                <li>Numero di immagini presenti nella pagina</li>
+                <li>Numero di nodi dell'albero di parsing</li>
+                <li>Link contenuti nella pagina e relativo numero</li>
+                <li>Link che puntano a quella pagina (link entranti) e relativo numero</li>
+            </ul>
+            La presenza delle informazioni varia in base all'appartenenza dell'URI al dominio specificato.
+            <p class="quote"><h4>Nota</h4></p>
+            <blockquote>
+                La tabella relativa agli URI analizzati lascerà selezionato l'ultimo URI di cui si sono viste le informazioni. Questo per agevolare la leggibilità della tabella.
+                Nel caso si vogliano rivedere le informazioni di quest'ultimo URI si dovrà deselezionare la riga con la combinazione <i>Ctrl+click sinistro (sulla riga selezionata)</i>.
+            </blockquote>
+            Sotto la tabella relativa agli URI analizzati è possibile conoscere lo stato dell'analisi, il numero di pagine processate, cioè analizzate con successo o che hanno ritornato errore e le pagine in coda
+            per l'analisi. Le pagine in coda non corrispondono alle pagine rimanenti da scaricare, ma è un indice dello stato di attività dell'analisi. Quando tale indice raggiunge lo 0
+            le pagine previste sono state analizzate e le ultime pagine scaricate (se esistono) compariranno nella tabella.
+        </div>
+        <div class="section" id="stats">
+            <h1>Statistiche di un sito</h1>
+            <p>Vi è la possibilità di vedere informazioni statistiche relative ad un sito. Premere il tasto <b><i>Strumenti</i></b> quindi il tasto <b><i>Statistiche</i></b>.
+                Saranno mostrate le seguenti informazioni:
+            <ul>
+                <p><b>Numero totale URI visitati senza errori</b><br> Il numero di pagine interne ed esterne scaricate con successo.</p>
+                <p><b>Numero URI interni al dominio</b><br> Il numero di pagine interne analizzate con o senza errori</p>
+                <p><b>Numero URI che hanno prodotto errori</b><br> Il numero di pagine interne ed esterne che hanno presentato errori</p>
+                <p><b>Massimo numero di link in una pagina</b><br> Il numero massimo di link contenuti in una pagina scaricata</p>
+                <p><b>Numero massimo di link che puntano ad una pagina</b><br> Il massimo numero di link entranti in una pagina</p>
+                <p><b>Grafico sulle tipologie di URI</b><br> Tale grafico permette di comprendere le tipologie di URI analizzati. Utile per capire la bontà dell'analisi.
+                </p>
+            </ul>
+            </p>
+        </div>
+        <div class="section" id="pointedlink">
+            <h1>Calcolo di link da un sito aperto verso un altro sito aperto</h1>
+            <p>Questa funzionalità permette di capire quanti link uscenti da un sito aperto finiscono ad un altro sito aperto. In altre parole parole quali link entranti del secondo
+                sito sono del primo sito.</p>
+            <p>Per accedere allo strumento premere il tasto <b><i>Strumenti</i></b> dalla scheda relativa al sito sorgente e quindi <b><i>Link da questo sito verso..</i></b></p>
+            <p>Dal menù a tendina scegliere il sito di destinazione. Si può anche selezionare lo stesso sito sorgente.</p>
+            <p>Il numero di link corrispondente sarà dunque mostrato.</p>
+        </div>
+
+    </div>
+    <div class="footer">
+        <hr>
+        Web Site Analyser è stato sviluppato da Antonio Pirolozzi.
+    </div>
+</div>
+</body>
+</html>

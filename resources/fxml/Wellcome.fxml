@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+
+<BorderPane id="borderpane" fx:id="borderPane" prefHeight="2160.0" prefWidth="3840.0" style="-fx-background-color: #fff;" xmlns="http://javafx.com/javafx/8.0.40" xmlns:fx="http://javafx.com/fxml/1">
+   <center>
+      <VBox fx:id="infoContainer" alignment="CENTER" prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
+         <children>
+            <Text fill="#999999" strokeType="OUTSIDE" strokeWidth="0.0" text="Nessuna analisi è aperta">
+               <font>
+                  <Font name="System Bold" size="24.0" />
+               </font>
+            </Text>
+            <Text fx:id="text" fill="#999999" strokeType="OUTSIDE" strokeWidth="0.0" text="Avvia una nuova analisi o aprine una precedentemente salvata">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Text>
+         </children>
+      </VBox>
+   </center>
+</BorderPane>

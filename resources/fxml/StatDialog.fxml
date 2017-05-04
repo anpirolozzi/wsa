@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.chart.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<GridPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="443.0" prefWidth="706.0" xmlns="http://javafx.com/javafx/8.0.40" xmlns:fx="http://javafx.com/fxml/1" fx:controller="wsa.gui.components.views.StatDialogController">
+  <columnConstraints>
+    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+  </columnConstraints>
+  <rowConstraints>
+    <RowConstraints maxHeight="195.0" minHeight="10.0" prefHeight="134.0" vgrow="SOMETIMES" />
+    <RowConstraints maxHeight="321.0" minHeight="10.0" prefHeight="309.0" vgrow="SOMETIMES" />
+  </rowConstraints>
+   <children>
+      <VBox alignment="CENTER_LEFT" fillWidth="false" prefHeight="96.0" prefWidth="612.0">
+         <children>
+            <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <Label minWidth="-Infinity" text="Numero totale URI visitati senza errori: " />
+                  <Text fx:id="visitedUriText" strokeType="OUTSIDE" strokeWidth="0.0" text="0" wrappingWidth="180.46875" />
+               </children>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+            </HBox>
+            <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <Label minWidth="-Infinity" text="Numero URI interni al dominio: " />
+                  <Text fx:id="internalUriText" strokeType="OUTSIDE" strokeWidth="0.0" text="0" wrappingWidth="208.46875" />
+               </children>
+            </HBox>
+            <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <Label minWidth="-Infinity" text="Numero URI che hanno prodotto errori: " />
+                  <Text fx:id="errorsUriText" strokeType="OUTSIDE" strokeWidth="0.0" text="0" wrappingWidth="193.46875" />
+               </children>
+            </HBox>
+            <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <Label minWidth="-Infinity" text="Massimo numero di link in una pagina: " />
+                  <Text fx:id="maxLinkUriText" strokeType="OUTSIDE" strokeWidth="0.0" text="0" wrappingWidth="205.46875" />
+               </children>
+            </HBox>
+            <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <Label minWidth="-Infinity" text="Numero massimo di link che puntano ad una pagina: " />
+                  <Text fx:id="maxLinkPointingUriText" strokeType="OUTSIDE" strokeWidth="0.0" text="0" />
+               </children>
+            </HBox>
+         </children>
+         <padding>
+            <Insets left="15.0" />
+         </padding>
+      </VBox>
+      <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" GridPane.rowIndex="1">
+         <children>
+            <PieChart fx:id="pieChart" clockwise="false" title="Tipologie di URI" />
+         </children>
+      </VBox>
+   </children>
+   <opaqueInsets>
+      <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+   </opaqueInsets>
+</GridPane>

@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.text.*?>
+
+<GridPane alignment="CENTER" hgap="14.0" maxHeight="+Infinity" maxWidth="+Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="365.0" prefWidth="546.0" vgap="20.0" xmlns="http://javafx.com/javafx/8.0.40" xmlns:fx="http://javafx.com/fxml/1" fx:controller="wsa.gui.components.views.SeedDialogController">
+  <columnConstraints>
+    <ColumnConstraints hgrow="NEVER" maxWidth="-Infinity" minWidth="-Infinity" />
+    <ColumnConstraints halignment="CENTER" hgrow="ALWAYS" maxWidth="Infinity" minWidth="-Infinity" prefWidth="530.0" />
+      <ColumnConstraints halignment="CENTER" hgrow="ALWAYS" maxWidth="Infinity" minWidth="0.0" prefWidth="0.0" />
+  </columnConstraints>
+  <rowConstraints>
+      <RowConstraints maxHeight="5.0" minHeight="0.0" prefHeight="0.0" />
+    <RowConstraints maxHeight="Infinity" minHeight="0.0" prefHeight="0.0" valignment="CENTER" vgrow="ALWAYS" />
+    <RowConstraints maxHeight="Infinity" minHeight="-Infinity" prefHeight="26.0" valignment="CENTER" vgrow="ALWAYS" />
+      <RowConstraints maxHeight="Infinity" minHeight="-Infinity" prefHeight="250.0" valignment="CENTER" vgrow="ALWAYS" />
+      <RowConstraints maxHeight="Infinity" minHeight="10.0" prefHeight="250.0" valignment="CENTER" vgrow="ALWAYS" />
+      <RowConstraints maxHeight="10.0" minHeight="-Infinity" prefHeight="0.0" vgrow="NEVER" />
+      <RowConstraints maxHeight="10.0" minHeight="-Infinity" prefHeight="0.0" vgrow="NEVER" />
+      <RowConstraints maxHeight="10.0" minHeight="0.0" prefHeight="0.0" vgrow="NEVER" />
+  </rowConstraints>
+   <children>
+      <VBox prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
+         <children>
+            <HBox prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <Label text="Inserisci un URI Seed" />
+               </children>
+            </HBox>
+            <HBox prefHeight="25.0" prefWidth="487.0">
+               <children>
+                  <TextField fx:id="newSeedTextField" promptText="URI Seed" HBox.hgrow="ALWAYS" />
+                  <Button fx:id="browseButton" disable="true" layoutX="475.0" layoutY="10.0" mnemonicParsing="false" onAction="#browse" text="Sfoglia...">
+                     <HBox.margin>
+                        <Insets left="5.0" right="5.0" />
+                     </HBox.margin>
+                  </Button>
+                  <Button fx:id="addButton" defaultButton="true" mnemonicParsing="false" onAction="#addSeed" text="Aggiungi" />
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+      <VBox prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="1" GridPane.rowIndex="3">
+         <children>
+            <Label text="URI Seed inseriti" />
+            <ListView fx:id="seedListView" prefHeight="239.0" prefWidth="530.0" />
+         </children>
+      </VBox>
+      <HBox nodeOrientation="RIGHT_TO_LEFT" prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="4">
+         <children>
+            <Button fx:id="closeButton" cancelButton="true" mnemonicParsing="false" onAction="#close" prefHeight="25.0" prefWidth="67.0" text="Chiudi" />
+         </children>
+      </HBox>
+   </children>
+   <padding>
+      <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+   </padding>
+</GridPane>
